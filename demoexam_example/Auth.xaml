@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:demoexam_example"
         mc:Ignorable="d" Closing="Auth_OnClosing"
-        Title="Auth" Height="450" Width="400">
+        Title="Пример авторизации" Height="300" Width="400">
     <Window.Resources>
         <Style TargetType="Control" x:Key="ControlText">
             <Setter Property="Margin" Value="40 10"/>
@@ -13,16 +13,16 @@
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
         <Style TargetType="PasswordBox" BasedOn="{StaticResource ControlText}"/>
-        <Style TargetType="Button">
-            
+        <Style TargetType="Button" BasedOn="{StaticResource ControlText}">
+            <Setter Property="Margin" Value="10"/>
         </Style>
     </Window.Resources>
     <Grid>
         <StackPanel>
-            <Label Content="Авторизация"/>
+            <Label Content="Авторизация" Style="{StaticResource ControlText}" FontWeight="ExtraBlack"/>
             <TextBox x:Name="LoginBox" Style="{StaticResource ControlText}"/>
             <PasswordBox x:Name="PassBox"/>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="GuestBtn" Content="Войти как гость"
                         Click="GuestBtn_OnClick"/>
                 <Button x:Name="LoginBtn" Content="Войти"
