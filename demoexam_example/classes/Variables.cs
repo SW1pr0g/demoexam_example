@@ -8,8 +8,9 @@ namespace demoexam_example.classes
 {
     public static class Variables
     {
-        public static string ConnStr = "server=;user=;pwd=;database=;";
+        public static string ConnStr = "server=localhost;user=root;pwd=;database=train;";
         public static string ExitMsg = "Вы действительно хотите выйти из приложения?";
         public static string ExitTitle = "Выход из приложения";
+        public static bool AuthClosed = false;
     }
 }

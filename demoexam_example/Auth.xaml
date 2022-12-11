@@ -28,9 +28,12 @@
                 <Button x:Name="LoginBtn" Content="Войти"
                         Click="LoginBtn_OnClick" IsDefault="True"/>
             </StackPanel>
-            <Grid>
-                
-            </Grid>
+            <StackPanel Visibility="Hidden">
+                <Image x:Name="CapthaImg" 
+                       Height="200" Width="200"/>
+                <TextBox x:Name="CapthaBox" MaxLength="4" Margin="150 10"
+                         Style="{StaticResource ControlText}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
