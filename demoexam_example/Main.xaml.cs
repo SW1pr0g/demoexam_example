@@ -1,43 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace demoexam_example
 {
     public partial class MainWindow : Window
     {
-        private bool _closing = false;
+        private bool _closed = false;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void First_Click(object sender, RoutedEventArgs e)
+        private void GoAuth_Click(object sender, RoutedEventArgs e)
         {
-
+            ShowWindow(new Auth());
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (_closing == false)
+            if (_closed == false)
             {
-                var res = MessageBox.Show("Вы действительно хотите закрыть приложение?", "Выход из приложения",
+                var res = MessageBox.Show(classes.Variables.ExitMsg, classes.Variables.ExitTitle,
                     MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (res == MessageBoxResult.No)
                     e.Cancel = true;
-                var str = classes.MySqlConn.ConnStr;
             }            
+        }
+
+        private void ShowWindow(Window window)
+        {
+            _closed = true;
+            this.Close();
+            window.Show();
         }
     }
 }

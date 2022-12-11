@@ -20,13 +20,13 @@
         </Grid.RowDefinitions>
         
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-            <Button Content="Вариант 1" Click="First_Click"/>            
-            <Button Content="Вариант 2" Click="Second_Click"/>
+            <Button Content="Авторизация" Click="GoAuth_Click"/>            
+            <Button Content="Вариант 2" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Top">
-            <Button Content="Вариант 3" Click="Third_Click"/>
-            <Button Content="Вариант 4" Click="Fourth_Click"/>
-            <Button Content="Вариант 5" Click="Fifth_Click"/>
+            <Button Content="Вариант 3" />
+            <Button Content="Вариант 4" />
+            <Button Content="Вариант 5" />
         </StackPanel>
     </Grid>
 </Window>
