@@ -9,6 +9,7 @@ namespace demoexam_example
     public partial class Auth : Window
     {
         private bool _captha = false;
+        private string _capthaStr = String.Empty;
         public Auth()
         {
             InitializeComponent();
@@ -44,7 +45,10 @@ namespace demoexam_example
                     {
                         if (_captha == true)
                         {
-                            sw
+                            if (CapthaBox.Text != _capthaStr)
+                            {
+                                MessageBox.Show("Ошибка! Неверный ввод проверки Captha");
+                            }
                         }
                         if (cmd.ExecuteScalar() != null)
                             MessageBox.Show("Success Log!");
@@ -63,6 +67,20 @@ namespace demoexam_example
                 }
             }
             
+        }
+        private void ShowCaptha(int captha)
+        {
+            switch (captha)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
