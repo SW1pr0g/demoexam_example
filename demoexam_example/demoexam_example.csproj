@@ -69,13 +69,18 @@
     <Compile Include="Auth.xaml.cs">
       <DependentUpon>Auth.xaml</DependentUpon>
     </Compile>
+    <Compile Include="classes\Material.cs" />
     <Compile Include="classes\Variables.cs" />
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Materials.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Materials.xaml.cs">
+      <DependentUpon>Materials.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -106,6 +111,35 @@
     <Resource Include="images\captha\1.png" />
     <Resource Include="images\captha\2.png" />
     <Resource Include="images\captha\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\materials\image_1.jpeg" />
+    <Resource Include="images\materials\image_10.jpeg" />
+    <Resource Include="images\materials\image_11.jpeg" />
+    <Resource Include="images\materials\image_12.jpeg" />
+    <Resource Include="images\materials\image_13.jpeg" />
+    <Resource Include="images\materials\image_14.jpeg" />
+    <Resource Include="images\materials\image_15.jpeg" />
+    <Resource Include="images\materials\image_16.jpeg" />
+    <Resource Include="images\materials\image_17.jpeg" />
+    <Resource Include="images\materials\image_18.jpeg" />
+    <Resource Include="images\materials\image_19.jpeg" />
+    <Resource Include="images\materials\image_2.jpeg" />
+    <Resource Include="images\materials\image_20.jpeg" />
+    <Resource Include="images\materials\image_21.jpeg" />
+    <Resource Include="images\materials\image_22.jpeg" />
+    <Resource Include="images\materials\image_23.jpeg" />
+    <Resource Include="images\materials\image_24.jpeg" />
+    <Resource Include="images\materials\image_3.jpeg" />
+    <Resource Include="images\materials\image_4.jpeg" />
+    <Resource Include="images\materials\image_5.jpeg" />
+    <Resource Include="images\materials\image_6.jpeg" />
+    <Resource Include="images\materials\image_7.jpeg" />
+    <Resource Include="images\materials\image_8.jpeg" />
+    <Resource Include="images\materials\image_9.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
