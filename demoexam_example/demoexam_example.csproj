@@ -57,24 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Auth.xaml" />
-    <Page Include="Main.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Auth.xaml.cs">
-      <DependentUpon>Auth.xaml</DependentUpon>
-    </Compile>
     <Compile Include="classes\Material.cs" />
     <Compile Include="classes\Variables.cs" />
-    <Compile Include="Main.xaml.cs">
-      <DependentUpon>Main.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="Materials.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -106,11 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\captha\1.png" />
-    <Resource Include="images\captha\2.png" />
-    <Resource Include="images\captha\3.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\picture.png" />
