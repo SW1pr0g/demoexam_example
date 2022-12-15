@@ -58,10 +58,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Auth.xaml" />
-    <Page Include="Main.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -70,10 +66,6 @@
       <DependentUpon>Auth.xaml</DependentUpon>
     </Compile>
     <Compile Include="classes\Variables.cs" />
-    <Compile Include="Main.xaml.cs">
-      <DependentUpon>Main.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
