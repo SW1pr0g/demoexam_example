@@ -12,7 +12,7 @@ namespace demoexam_example
 
         private void GoAuth_Click(object sender, RoutedEventArgs e)
         {
-            ShowWindow(new Auth());
+            
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
