@@ -27,7 +27,7 @@
             <RowDefinition Height="0.15*"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="SearchBox"
-            Style="{StaticResource Footer}" KeyUp="SearchBox_OnKeyUp"/>
+            Style="{StaticResource Footer}" TextChanged="SearchBox_OnTextChanged"/>
         <ComboBox Grid.Column="1" x:Name="SortBox"/>
         <ComboBox Grid.Column="2" x:Name="FilterBox"/>
         <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3" Margin="10">

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using demoexam_example.classes;
 using MySql.Data.MySqlClient;
@@ -50,7 +51,7 @@ namespace demoexam_example
             }   
         }
 
-        private void SearchBox_OnKeyUp(object sender, KeyEventArgs e)
+        private void SearchBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             ShowData($"SELECT Image, (SELECT train.MaterialType.Title FROM train.MaterialType WHERE train.Material.MaterialTypeID = train.MaterialType.ID ) AS MaterialType, Title, CountInStock, MinCount FROM train.Material WHERE Material.Title LIKE '%{SearchBox.Text}%';");
         }
