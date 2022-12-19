@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Security.Cryptography;
+using System.Threading;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using MySql.Data.MySqlClient;
@@ -40,7 +41,7 @@ namespace demoexam_example
                 {
                     conn.Open();
 
-                    string sql = String.Format("SELECT UserSurname FROM User WHERE UserLogin = '{0}' AND UserPassword = '{1}';", 
+                    string sql = String.Format("SELECT user_name FROM User WHERE user_login = '{0}' AND user_password = '{1}';", 
                         LoginBox.Text, PassBox.Password);
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
@@ -48,7 +49,8 @@ namespace demoexam_example
                         {
                             if (CapthaBox.Text != _capthaStr)
                             {
-                                MessageBox.Show("Ошибка! Неверный ввод проверки Captha");
+                                MessageBox.Show("Ошибка! Неверный ввод проверки Captha! Система заморожена на 10 секунд.");
+                                Thread.Sleep(1000*10);
                                 ShowCaptha();
                                 return;
                             }
